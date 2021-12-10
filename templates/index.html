@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mission to Mars</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div
+    class="p-5 text-center bg-image rounded-3"
+    style="
+      background-image: url('https://i.guim.co.uk/img/media/6587d50335dd42e7a054c8eac275087c3dbbd15e/0_116_1280_768/master/1280.jpg?width=1200&quality=85&auto=format&fit=max&s=cf99b8d2ef828e8ebe10a91614e436e3');
+      height: 400px;
+    "
+  >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-200">
+        <div class="text-white">
+          <h1 class="mb-3">Mission To Mars</h1>
+          <h4 class="mb-2">Learn More about the Red planet!</h4>
+          <a class="btn btn-outline-light btn-lg" href="#!" role="button">What's New?</a>
+        </div>
+     
+            
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{mars.new_title}}</h5>
+          <p class="card-text">{{mars.new_paragraph}}</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{mars.img_url}}" alt="picture of mars">
+            <div class="card-body">
+              <h5 class="card-title">Today's Mars Picture</h5>
+              <p class="card-text">Mars is beautiful!</p>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Hemispheres on Mars</h5>
+                           
+            </div>
+          </div>
+        </br>
+        <div class="row">
+        {% for hemisphere in mars.list_of_hemisphere_dictionaries %} 
+        <div class="col-6 border">
+        </br>
+              <div>
+                <img width="512 px" height="512 px" src="{{hemisphere.url | safe }}">
+              </div>
+
+              <div>
+                <h4> {{hemisphere.title | safe }} </h4>  
+              </div>
+      
+        </div>
+      {% endfor %}
+</div> 
+
+
+
+        <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{new_title}}</h5>
+          <p class="card-text">{{mars.table | safe}}</p>
+          
+        </div>
+      </div>
+    </div>
+        </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+

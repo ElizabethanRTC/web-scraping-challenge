@@ -1,0 +1,15 @@
+.mars-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.light_background {
+    background: #f5efefa3;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
